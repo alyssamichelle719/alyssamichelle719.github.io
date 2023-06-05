@@ -1,18 +1,18 @@
-function openGallery(id) {
-    closeAll();
-    const gallery = document.getElementById('gallery-'+id);
-    const card = document.getElementById('card-'+id);
-    gallery.classList.add('Gallery--active');
-    card.classList.add('Card--active');
-  }
-  
-  function closeAll() {
-    const galleryActv = document.querySelector('.Gallery--active');
-    const cardActv = document.querySelector('.Card--active');
-    if (galleryActv) {
-      galleryActv.classList.remove('Gallery--active');
-    }
-    if (cardActv) {
-      cardActv.classList.remove('Card--active');
-    }
-  }
+const buttons = document.querySelectorAll('.project');
+const overlay = document.querySelector('.overlay');
+const overlayImage = document.querySelector('.overlay__inner img');
+
+function open(e) {
+  overlay.classList.add('open');
+  const src= e.currentTarget.querySelector('img').src;
+  overlayImage.src = src;
+}
+
+function close() {
+  overlay.classList.remove('open');
+}
+
+buttons.forEach(button => button.addEventListener('click', open));
+overlay.addEventListener('click', close);
+
+
