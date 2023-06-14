@@ -97,6 +97,33 @@ iframe{
 }
 
 /* web imgs */
-.web {
+
+.web{
+    position: relative;
+}
+
+.web img {
     width: 100%;
+}
+
+.web  p {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 1em 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(147, 129, 255);
+    text-shadow: 1px 0px white;
+    font-size: 2em;
+    letter-spacing: 2px;
+    z-index: 3;
+}
+
+.web a{
+    color: rgb(147, 129, 255);
+}
+
+.web a:hover{
+    color: var(--bs-color2);
 }
