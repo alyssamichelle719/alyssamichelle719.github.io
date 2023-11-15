@@ -55,6 +55,10 @@ a:hover{
     color: var(--bs-light);
 }
 
+p, li{
+    font-size: 1.2em;
+}
+
 
 /* Homepage styling */
 .home {
